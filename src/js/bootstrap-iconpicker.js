@@ -491,7 +491,7 @@
                             var tip = ($.fn.bsVersion() === '3.x') ? el.tip() : $(el.getTipElement())
                             tip.addClass('iconpicker-popover');
                         }).on('shown.bs.popover', function () {
-                            data.switchPage(op.icon);
+                            data.switchPage(op.page);
                             data.bindEvents();
                         });
                         //console.log($.fn.bsVersion());
@@ -506,7 +506,7 @@
                         .append(op.table)
                         .addClass('iconpicker')
                         .addClass(op.align);
-                    data.switchPage(op.icon);
+                    data.switchPage(op.page);
                     data.bindEvents();
                 }
 
