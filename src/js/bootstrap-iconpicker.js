@@ -131,6 +131,12 @@
             });
             op.icons = result;
         }
+
+        if(this.$element.data('filter')) {
+            op.icons = op.icons.filter(function() {
+                return i.toLowerCase().indexOf(this.$element.data('filter')) > -1
+            });
+        }
     };
 
     Iconpicker.prototype.removeAddClass = function (target, remove, add) {
