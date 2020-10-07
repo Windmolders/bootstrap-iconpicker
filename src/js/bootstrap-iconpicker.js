@@ -133,8 +133,9 @@
         }
 
         if(this.$element.data('filter')) {
-            op.icons = op.icons.filter(function() {
-                return i.toLowerCase().indexOf(this.$element.data('filter')) > -1
+            var _this = this;
+            op.icons = op.icons.filter(function(i) {
+                return i.toLowerCase().indexOf(_this.$element.data('filter')) > -1
             });
         }
     };
