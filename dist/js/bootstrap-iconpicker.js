@@ -137,6 +137,13 @@
             });
             op.icons = result;
         }
+
+        if(this.$element.data('filter')) {
+            var _this = this;
+            op.icons = op.icons.filter(function(i) {
+                return i.toLowerCase().indexOf(_this.$element.data('filter')) > -1
+            });
+        }
     };
 
     Iconpicker.prototype.removeAddClass = function (target, remove, add) {
